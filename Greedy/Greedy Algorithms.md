@@ -34,3 +34,6 @@ This is a rather versatile technique. It essentially shows you that it is possib
 
 
 ## Questions :
+
+* A. GamingForces ----> [C++](https://github.com/Mohamedan-Farag/Topics/blob/main/Greedy/solutions%20by%20cpp/A.%20GamingForces.cpp)
+
