@@ -1,6 +1,6 @@
 # Greedy Algorithms
 
-Greedy Algorithms are one of the most intuitive algorithms. Whenever we see a problem we first try to apply some greedy strategy to get the answer(**we humans are greedy, aren't we :P ? 🧗‍♂️**). 
+ Greedy Algorithms are one of the most intuitive algorithms. Whenever we see a problem we first try to apply some greedy strategy to get the answer(**we humans are greedy, aren't we :P ? 🧗‍♂️**). 
 
 Greedy approaches are quite simple and easy to understand But many times the proving part might be difficult :
 
@@ -18,19 +18,19 @@ The greedy algorithm doesn't always produce the optimal solution. This is the ma
 
 
 ## How can you prove that a greedy algorithm is optimal? 🤔
-There are two ways to prove that a greedy algorithm is optimal. They are:
+ There are two ways to prove that a greedy algorithm is optimal. They are:
 
 
 **1. ‘Greedy stays ahead’ arguments :-**
 
-Using a ‘Greedy stays ahead’ argument is one of the simplest methods to prove that a greedy algorithm is correct. It shows that according to some measure, the greedy algorithm always is at least as far ahead as the optimal solution during each iteration of the algorithm. This fact can be used to prove that the greedy algorithm is optimal.
+ Using a ‘Greedy stays ahead’ argument is one of the simplest methods to prove that a greedy algorithm is correct. It shows that according to some measure, the greedy algorithm always is at least as far ahead as the optimal solution during each iteration of the algorithm. This fact can be used to prove that the greedy algorithm is optimal.
 
 
 
 **2. Exchange Arguments :-**
 
 
-This is a rather versatile technique. It essentially shows you that it is possible for you to iteratively transform any optimal solution into the solution produced by the greedy algorithm without making any change .
+ This is a rather versatile technique. It essentially shows you that it is possible for you to iteratively transform any optimal solution into the solution produced by the greedy algorithm without making any change .
 
 
 ## Exampls :
@@ -40,7 +40,7 @@ This is a rather versatile technique. It essentially shows you that it is possib
 * A. Image :------->[**Problem**](https://codeforces.com/problemset/problem/1721/A )---> **solution**----> [C++](https://github.com/Mohamedan-Farag/Topics/blob/main/Greedy/solutions%20by%20cpp/A.%20Image.cpp) .
 
 
-## References 📖: :- 
+## References 📖 :- 
 
  *These are some references that I advise you to take a look at before you solve these problems .
  
