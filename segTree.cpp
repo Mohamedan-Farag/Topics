@@ -38,20 +38,41 @@ Nod s[N];
 
 struct segmentTree
 {
-    int sz; vector<Nod>seg; Nod ret={INT_MAX};
+    int sz; vector<Nod>seg; Nod ret={0};
     segmentTree(int n)
     {
         sz=1;
         while(sz<n)sz*=2;
         seg.resize(2*sz);
     }
-    Nod merge(Nod a,Nod b)
+///////////////////////////////////////////////////////////////////////
+    Nod get(int idx){
+      return query(idx,idx);
+    }
+
+    Nod query(int l,int r){
+      return query(l,r,0,sz-1,1);
+    }
+
+    void update(int idx,int val){
+      update(0,sz-1,1,idx,val);
+    }
+
+///////////////////////////////////////////////////////////////////////
+        Nod merge(Nod a,Nod b)
     {
         Nod res;
-        res.num=min(a.num,b.num);
+        res.num=max(a.num,b.num);
         return res;
         
     }
+
+        Nod sum(Nod a,Nod b){
+      Nod res;
+      res.num=a.num+b.num;
+      return res;
+        }
+    
     void build(int l,int r,int node)
     {
         if(l==r){
@@ -73,7 +94,7 @@ struct segmentTree
     {
         if(l==r)
         {
-            seg[node]={val};
+            seg[node]=sum(seg[node],{val});
             return;
         }
         int mid=(l+r)/2;
@@ -87,7 +108,7 @@ struct segmentTree
         }
         seg[node]=merge(seg[2*node],seg[2*node+1]);
     }
-    Nod query(int lx,int rx,int l=0,int r=n-1,int node=1)
+    Nod query(int lx,int rx,int l,int r,int node)
     {
         if(l>rx||r<lx)
         {
@@ -103,7 +124,7 @@ struct segmentTree
 };
 
 void solve(){
-// segtree is op for range querys
+
 cin >> n;
 ll q; cin >> q;
 for(int i=0;i<n;i++){
@@ -114,7 +135,18 @@ segmentTree st(n);
 st.build(0,n-1,1);
 
 while(q--){
+ int t; cin >> t;
+ if(t==2){
+  cout<<st.query(0,n-1).num<<endl;
+ }
+ else {
+  int idx,val; cin >> idx >> val;
+  st.update(idx,val);
+ }
+}
 
+for(int i=0;i<n;i++){
+  cout<<st.query(i,i).num<<" ";
 }
 
 }
